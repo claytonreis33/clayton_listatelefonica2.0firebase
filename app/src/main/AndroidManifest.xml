@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.projeto.agendatelefonica">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".controller.Aplicacao"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".controller.ListarContato"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".controller.CriaContato"
+            android:label="@string/cria_contato">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controller.ListarContato" />
+        </activity>
+        <activity
+            android:name=".controller.EditaContato"
+            android:label="@string/edita_contato">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controller.ListarContato" />
+        </activity>
+        <activity android:name=".controller.LoginContato">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.CriarGrupo" />
+        <activity android:name=".controller.ListarContatosGrupos"></activity>
+    </application>
+
+</manifest>
